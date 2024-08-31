@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -32,23 +32,8 @@
                 android:textAlignment="center"
                 android:textColor="#9C27B0"
                 />
-            <EditText
-                android:layout_width="190dp"
-                android:layout_height="70dp"
-                android:hint="Enter your Username"
-                android:textSize="17dp"
-                android:textAlignment="center"
-                android:fontFamily="@font/lexend_light"
-                />
 
-            <Button
-                android:layout_width="200dp"
-                android:layout_height="48dp"
-                android:text="Continue"
-                android:layout_marginTop="40dp"
-                android:fontFamily="@font/lexend_light"
-                />
         </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

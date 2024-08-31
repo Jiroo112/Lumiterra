@@ -1,6 +1,5 @@
-package com.Alphatz.Lumiterra;
+package com.Alphatz.Lumiterra.register;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,35 +8,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.Alphatz.Lumiterra.register.Login_page;
+import com.Alphatz.Lumiterra.R;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-public class MainActivity extends AppCompatActivity {
-
-    Timer time;
+public class Login_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login_page);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        time = new Timer();
-        time.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, Login_page.class);
-                startActivity(intent);
-                finish();
-            }
-        }, 1000);
     }
-
 }
